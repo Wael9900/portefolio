@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf_8" />
+    <meta name="decription" content="here" />
+    <title>mon portefolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="portefolioCSS.css" />
+  
+  </head>
+  <body>
+    <header id="head" class="head"> 
+        <a href="" class="titre">Wael Ouerfelli</a>
+        <nav id="nav" class="nav">
+            <a href="#home" >Home</a>
+            <a href="#about" >About</a>
+            <a href="#projects" >Projects</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+        <label class="lab_icn"  onclick="navclick()">
+              ...
+        </label>
+    </header>
+    <div id="home" class="home">
+         <div class="home_text">
+              <p>web develop</p>
+              <h2> Hi , I am <br> <span>Wael Ouerfelli</span><br> </h2>
+         </div >
+         <div class="home_img">
+                <img src="403386139_743125111019357_2639995537595359915_n.jpg" alt="photo" >
+         </div>
+    </div>
+
+    
+    <div id="about" class="about">
+        <h2 > About Me</h2>
+        <div class="intro"> 
+            I am a passionate and innovative software developer with a keen interest in creating efficient and user-friendly applications. With a solid foundation in computer science and a constant thirst for learning, I thrive on tackling challenges and solving complex problems in the world of coding. My journey in software development has equipped me with a diverse set of skills, including proficiency in languages such as JavaScript, Python, and Java.
+            
+            I am deeply committed to writing clean, maintainable code and enjoy collaborating with cross-functional teams to bring creative ideas to life. My experience spans front-end development, where I craft seamless and intuitive user interfaces using modern frameworks like React, to back-end development, where I design robust and scalable server-side solutions. I am also well-versed in database management and API integration.
+            
+            In addition to my technical abilities, I value effective communication and believe in the power of teamwork. I am always eager to stay up-to-date with the latest industry trends and technologies, attending conferences and participating in online communities to expand my knowledge. Whether it's building web applications, solving algorithmic puzzles, or contributing to open-source projects, I am driven by a genuine passion for turning innovative ideas into reality.
+        </div>
+        <ul> 
+            <li onclick="headclick('headskill','headeducation')">skills</li>
+            <li  onclick="headclick('headeducation','headskill')">education</li>
+        </ul>
+        <div id="headskill"  >
+            As a seasoned developer, my skill set encompasses a broad range of technical proficiencies and problem-solving capabilities. I specialize in front-end technologies, boasting expertise in crafting responsive and visually appealing user interfaces using HTML, CSS, and JavaScript. My proficiency extends to modern front-end frameworks such as React, allowing me to build dynamic and interactive web applications with efficiency and precision.
+
+On the back end, I am well-versed in server-side development using languages like Node.js and Python. Database management, including both SQL and NoSQL databases, is a facet of my skill set that enables me to design robust and scalable systems. I am adept at creating RESTful APIs, facilitating seamless communication between the front end and back end.
+
+Furthermore, my experience includes version control with Gitmmitment to staying current with industry trends and emerging technologies round out my profile as a developer. Whether it's building from scratch, refactoring existing code, or collaborating with cross-functional teams, I am enthusiastic about leveraging my skills to create innovative and efficient solutions., continuous integration, and deployment strategies. I am accustomed to working in collaborative, agile environments, utilizing tools like Jira and participating in regular stand-ups and sprint planning.
+        </div>
+        <div id="headeducation" >
+            <pre>
+                .isamm 2023.............................
+                .
+                .
+            </pre>
+        </div>
+    </div>
+
+
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project_group">
+            <div>
+                Project1
+            </div>
+            <div>
+                Project2
+            </div>
+            <div>
+                Project3
+            </div>
+        </div>
+        <a href="" style="font-size:20px;">See All</a>
+
+    </div>
+    
+    
+    <div id="contact" class="contact" >
+        <h2 style="font-size:40px ;"> Contact</h2>
+        <form action="" method="post">
+            <div>
+                <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+        </div>
+            <button type="submit">Submit</button>
+        </form>
+        <a href=""> <i class="fa-brands fa-facebook" style="color: #0f3e8f;"></i> </a>
+        <a href=""> <i class="fa-brands fa-linkedin" style="color: #0c419d;"></i> </a>
+        <a href=""> <i class="fa-brands fa-github"></i>                             </a>
+
+
+
+    </div>
+
+
+    <script>
+        function headclick(first,second) {
+            var x = document.getElementById(first);
+            var y = document.getElementById(second);
+            if (x.style.display == 'none') {
+                x.style.display = 'block';
+                y.style.display = 'none';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
+        function navclick(){
+            var nav = document.getElementById('nav');
+            var head = document.getElementById('head');
+            if (nav.style.display=='none'){
+                nav.style.display='block';
+                head.style.height='fit-content';
+            }
+            else {
+                nav.style.display='none';
+                head.style.height='fit-content';
+            }
+        }
+        /*
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrolldown > 20 || document.documentElement.scrolldown > 20) {
+            document.getElementById("head").style.position = "fixed";            
+        } else {
+            document.getElementById("head").style.position = "absolute";
+        }
+}*/
+    </script>
+  </body>
